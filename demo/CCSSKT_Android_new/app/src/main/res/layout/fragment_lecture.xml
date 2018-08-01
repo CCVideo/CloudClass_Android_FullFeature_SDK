@@ -1,0 +1,326 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/scenes_bg">
+
+    <com.github.rongi.rotate_layout.layout.RotateLayout
+        android:id="@+id/id_lecture_doc_rotate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/id_lecture_doc_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:clickable="true">
+
+            <com.bokecc.ccsskt.example.view.DocWebView
+                android:id="@+id/id_lecture_docppt_display"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"/>
+
+            <com.bokecc.ccsskt.example.view.DocView
+                android:id="@+id/id_lecture_doc_display"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <ImageButton
+                android:id="@+id/id_lecture_doc_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/doc_back"/>
+
+            <ImageButton
+                android:id="@+id/id_lecture_doc_forward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/doc_forward" />
+
+            <RelativeLayout
+                android:id="@+id/id_lecture_video_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/id_lecture_video_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/video_big_box" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/id_lecture_prepare_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#80ffffff"
+                android:visibility="gone">
+
+                <ProgressBar
+                    android:id="@+id/id_lecture_pb"
+                    style="@android:style/Widget.ProgressBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="30dp"
+                    android:max="100"
+                    android:progress="20"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/id_lecture_doc_update_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/id_lecture_pb"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/lecture_doc_prepare"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/id_lecture_doc_bottom_layout"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="12dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp">
+
+                <ImageButton
+                    android:id="@+id/id_lecture_doc_fullscreen"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/fullscreen"/>
+
+                <ImageButton
+                    android:id="@+id/id_lecture_doc_img_grid"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/doc_img_grid_selector"/>
+
+                <ImageButton
+                    android:id="@+id/id_lecture_doc_exit_fullscreen"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/exitfullscreen"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+            <ProgressBar
+                android:id="@+id/id_lecture_doc_progress"
+                style="@android:style/Widget.Holo.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_alignParentBottom="true"
+                android:progressDrawable="@drawable/doc_progress_drawable" />
+
+            <LinearLayout
+                android:id="@+id/id_lecture_drag_child"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="19dp"
+                android:background="@drawable/draw_bar_bg"
+                android:orientation="horizontal"
+                android:paddingEnd="18dp"
+                android:paddingStart="18dp"
+                android:visibility="gone">
+
+                <ImageButton
+                    android:id="@+id/id_lecture_draw_paint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/draw_paint"/>
+
+                <ImageButton
+                    android:id="@+id/id_lecture_draw_undo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/draw_undo" />
+
+                <!--<ImageButton-->
+                    <!--android:id="@+id/id_lecture_draw_eraser"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginStart="10dp"-->
+                    <!--android:background="@drawable/teacher_doc_eraser"/>-->
+
+                <ImageButton
+                    android:id="@+id/id_lecture_draw_clear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/teacher_doc_clear"
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:id="@+id/id_lecture_page_change_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:visibility="gone">
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="7dp"
+                        android:background="#ffffff"/>
+
+                    <ImageButton
+                        android:id="@+id/id_lecture_bar_doc_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/teacher_doc_back"/>
+
+                    <TextView
+                        android:id="@+id/id_lecture_bar_doc_index"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="5dp"
+                        android:gravity="center"
+                        android:text="0/0"
+                        android:textColor="#ffffff"/>
+
+                    <ImageButton
+                        android:id="@+id/id_lecture_bar_doc_forward"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/teacher_doc_forward"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--<RelativeLayout
+                android:id="@+id/id_lecture_drag_child"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="19dp"
+                android:background="@drawable/draw_bar_bg"
+                android:paddingEnd="18dp"
+                android:paddingStart="18dp"
+                android:visibility="gone">
+
+                <ImageButton
+                    android:id="@+id/id_lecture_draw_paint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/draw_paint"/>
+
+                <ImageButton
+                    android:id="@+id/id_lecture_draw_undo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/id_lecture_draw_paint"
+                    android:background="@drawable/draw_undo"/>
+
+            </RelativeLayout>-->
+
+        </RelativeLayout>
+
+    </com.github.rongi.rotate_layout.layout.RotateLayout>
+
+    <RelativeLayout
+        android:id="@+id/id_lecture_h_video_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="5dp"
+        android:paddingTop="65dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/id_doc_live_h_videos"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none"/>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/id_lecture_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line"
+        android:layout_below="@id/id_lecture_doc_rotate"
+        android:background="#80000000"/>
+
+    <RelativeLayout
+        android:id="@+id/id_lecture_v_video_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/id_lecture_line"
+        android:paddingEnd="2.5dp"
+        android:paddingStart="2.5dp"
+        android:paddingTop="5dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/id_doc_live_v_videos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:scrollbars="none"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/id_lecture_video_full_screen_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/id_lecture_video_full_screen_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/video_big_box"/>
+
+        <RelativeLayout
+            android:id="@+id/id_lecture_video_full_screen_other_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/camera_close_bg"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/id_lecture_video_full_screen_mic_close"
+            android:layout_width="9dp"
+            android:layout_height="9dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/mic_close_icon"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/id_lecture_video_exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/exitfullscreen"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

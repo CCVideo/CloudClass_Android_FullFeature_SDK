@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/id_teacher_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:id="@+id/id_teacher_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="19.5dp"
+        android:layout_marginStart="19.5dp"
+        android:layout_marginTop="19dp">
+
+        <include
+            android:id="@+id/id_teacher_class_user_list"
+            layout="@layout/top_msg_layout"/>
+
+        <ImageButton
+            android:id="@+id/id_teacher_close"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/close_selector"/>
+
+        <ImageButton
+            android:id="@+id/id_teacher_video_controller"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:layout_toStartOf="@id/id_teacher_close"
+            android:background="@drawable/draw_hide"
+            android:visibility="gone"/>
+        <ImageButton
+            android:id="@+id/id_teacher_follow"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:layout_toStartOf="@id/id_teacher_close"
+            android:background="@drawable/follow_selector"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <!--底部操作区域-->
+    <LinearLayout
+        android:id="@+id/id_teacher_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:background="#00000000">
+
+        <FrameLayout
+            style="@style/TeacherBottomItemLayoutStyle">
+
+            <ImageButton
+                android:id="@+id/id_teacher_chat"
+                style="@style/TeacherBottomBtnStyle"
+                android:background="@drawable/chat_selector"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3">
+
+            <RelativeLayout
+                android:id="@+id/id_teacher_start_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/id_teacher_start"
+                    android:layout_width="180dp"
+                    android:layout_height="42dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/start_selector"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/id_teacher_stop_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <FrameLayout
+                    style="@style/TeacherBottomItemLayoutStyle">
+
+                    <ImageButton
+                        android:id="@+id/id_teacher_camera"
+                        style="@style/TeacherBottomBtnStyle"
+                        android:background="@drawable/camera_selector"/>
+                </FrameLayout>
+
+                <FrameLayout
+                    style="@style/TeacherBottomItemLayoutStyle">
+
+                    <ImageButton
+                        android:id="@+id/id_teacher_stop"
+                        style="@style/TeacherBottomBtnStyle"
+                        android:background="@drawable/stop_selector"/>
+                </FrameLayout>
+
+                <FrameLayout
+                    style="@style/TeacherBottomItemLayoutStyle">
+
+                    <ImageButton
+                        android:id="@+id/id_teacher_mic"
+                        style="@style/TeacherBottomBtnStyle"
+                        android:background="@drawable/mic_selector"/>
+                </FrameLayout>
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            style="@style/TeacherBottomItemLayoutStyle">
+
+            <ImageButton
+                android:id="@+id/id_teacher_more"
+                style="@style/TeacherBottomBtnStyle"
+                android:background="@drawable/more_selector"/>
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/id_teacher_drag_child"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="19dp"
+        android:background="@drawable/draw_bar_bg"
+        android:paddingEnd="18dp"
+        android:paddingStart="18dp"
+        android:visibility="gone">
+
+        <ImageButton
+            android:id="@+id/id_teacher_draw_paint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/draw_paint"/>
+
+        <ImageButton
+            android:id="@+id/id_teacher_draw_undo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/draw_undo"/>
+
+        <!--<ImageButton-->
+        <!--android:id="@+id/id_teacher_draw_eraser"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginStart="10dp"-->
+        <!--android:background="@drawable/teacher_doc_eraser"/>-->
+
+        <ImageButton
+            android:id="@+id/id_teacher_draw_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/teacher_doc_clear"/>
+
+        <LinearLayout
+            android:id="@+id/id_teacher_page_change_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="7dp"
+                android:background="#ffffff"
+                android:layout_marginStart="5dp"/>
+
+            <ImageButton
+                android:id="@+id/id_teacher_doc_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/teacher_doc_back"/>
+
+            <TextView
+                android:id="@+id/id_teacher_doc_index"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginStart="5dp"
+                android:textColor="#ffffff"
+                android:text="0/0"/>
+
+            <ImageButton
+                android:id="@+id/id_teacher_doc_forward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/teacher_doc_forward"/>
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp"
+            android:background="#ffffff"
+            android:layout_marginStart="5dp"/>
+
+        <ImageButton
+            android:id="@+id/id_teacher_draw_tbc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/draw_bar_controller"/>
+
+    </LinearLayout>
+
+    <!--聊天内容展示区-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/id_teacher_chat_list"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_above="@id/id_teacher_bottom_layout"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginStart="15dp"
+        android:background="#00000000"
+        android:overScrollMode="never"
+        android:scrollbars="none"/>
+
+    <!--遮罩层-->
+    <FrameLayout
+        android:id="@+id/id_teacher_click_dismiss_chat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00FFFFFF"
+        android:clickable="true"
+        android:visibility="gone"/>
+
+    <!--聊天输入区-->
+    <RelativeLayout
+        android:id="@+id/id_teacher_chat_layout"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:layout_alignParentBottom="true"
+        android:background="#f2f2f2"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/id_teacher_chat_send"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/round_btn"
+            android:text="@string/send_txt"
+            android:textColor="#ffffff"/>
+
+        <ImageButton
+            android:id="@+id/id_teacher_chat_open_img"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/chat_open_img"/>
+
+        <EditText
+            android:id="@+id/id_teacher_chat_input"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/id_teacher_chat_open_img"
+            android:layout_toStartOf="@id/id_teacher_chat_send"
+            android:background="@drawable/chat_input"
+            android:imeOptions="flagNoExtractUi"
+            android:inputType="text"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:textColor="#323232"
+            android:textCursorDrawable="@drawable/cursor_style"
+            android:textSize="16sp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/id_teacher_chat_img_fullscreen_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/id_teacher_chat_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/id_teacher_blur_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:visibility="gone">
+        <eightbitlab.com.blurview.BlurView
+            android:id="@+id/id_teacher_blur_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/id_teacher_blur_clickable"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true">
+
+                <ImageButton
+                    android:id="@+id/id_teacher_blur_doc"
+                    android:layout_width="105dp"
+                    android:layout_height="105dp"
+                    android:background="@drawable/blur_doc"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone"/>
+                <ImageButton
+                    android:id="@+id/id_teacher_blur_update_img"
+                    android:layout_width="105dp"
+                    android:layout_height="105dp"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/blur_update_img"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="60dp"
+                    android:visibility="gone"/>
+
+                <ImageButton
+                    android:id="@+id/id_teacher_blur_named"
+                    android:layout_width="105dp"
+                    android:layout_height="105dp"
+                    android:background="@drawable/blur_roll"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginTop="60dp"
+                    android:visibility="gone"/>
+                <ImageButton
+                    android:id="@+id/id_teacher_blur_layout"
+                    android:layout_width="105dp"
+                    android:layout_height="105dp"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/blur_layout"
+                    android:layout_marginTop="60dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="60dp"
+                    android:visibility="gone"/>
+
+                <ImageButton
+                    android:id="@+id/id_teacher_blur_setting"
+                    android:layout_width="105dp"
+                    android:layout_height="105dp"
+                    android:background="@drawable/blur_setting"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginTop="200dp"
+                    android:visibility="gone"/>
+
+                <!--<LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center_horizontal">
+                        <ImageButton
+                            android:id="@+id/id_teacher_blur_doc"
+                            android:layout_width="105dp"
+                            android:layout_height="105dp"
+                            android:background="@drawable/blur_doc"
+                            android:visibility="gone"/>
+                        <ImageButton
+                            android:id="@+id/id_teacher_blur_update_img"
+                            android:layout_width="105dp"
+                            android:layout_height="105dp"
+                            android:layout_marginStart="20dp"
+                            android:background="@drawable/blur_update_img"
+                            android:visibility="gone"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="25dp">
+                        <ImageButton
+                            android:id="@+id/id_teacher_blur_named"
+                            android:layout_width="105dp"
+                            android:layout_height="105dp"
+                            android:background="@drawable/blur_roll"
+                            android:visibility="gone"/>
+                        <ImageButton
+                            android:id="@+id/id_teacher_blur_layout"
+                            android:layout_width="105dp"
+                            android:layout_height="105dp"
+                            android:layout_marginStart="20dp"
+                            android:background="@drawable/blur_layout"
+                            android:visibility="gone"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="25dp">
+                        <ImageButton
+                            android:id="@+id/id_teacher_blur_setting"
+                            android:layout_width="105dp"
+                            android:layout_height="105dp"
+                            android:background="@drawable/blur_setting"
+                            android:visibility="gone"/>
+                        <ImageButton
+                            android:layout_width="105dp"
+                            android:layout_height="105dp"
+                            android:layout_marginStart="20dp"
+                            android:visibility="invisible"/>
+                    </LinearLayout>
+                </LinearLayout>-->
+
+            </RelativeLayout>
+
+        </eightbitlab.com.blurview.BlurView>
+    </RelativeLayout>
+
+</RelativeLayout>

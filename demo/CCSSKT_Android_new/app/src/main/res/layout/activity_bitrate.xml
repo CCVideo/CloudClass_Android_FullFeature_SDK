@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        style="@style/bitrateItemStyle">
+
+        <TextView
+            android:id="@+id/id_bitrate_role_teacher"
+            style="@style/bitrateTxtStartStyle"
+            android:text="@string/role_teacher"/>
+
+        <TextView
+            android:id="@+id/id_bitrate_tcurrent_value"
+            style="@style/bitrateTxtEndStyle"
+            android:text="50K"/>
+
+        <SeekBar
+            android:id="@+id/id_bitrate_teacher_bar"
+            android:layout_toEndOf="@id/id_bitrate_role_teacher"
+            android:layout_toStartOf="@id/id_bitrate_tcurrent_value"
+            style="@style/bitrateSeekBarStyle"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/bitrateItemStyle">
+
+        <TextView
+            android:id="@+id/id_bitrate_role_student"
+            style="@style/bitrateTxtStartStyle"
+            android:text="@string/role_student"/>
+
+        <TextView
+            android:id="@+id/id_bitrate_scurrent_value"
+            style="@style/bitrateTxtEndStyle"
+            android:text="200K"/>
+
+        <SeekBar
+            android:id="@+id/id_bitrate_student_bar"
+            android:layout_toEndOf="@id/id_bitrate_role_student"
+            android:layout_toStartOf="@id/id_bitrate_scurrent_value"
+            style="@style/bitrateSeekBarStyle"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/id_bitrate_save"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/round_btn"
+        android:text="@string/bitrate_save"
+        android:textColor="#ffffff"/>
+
+</LinearLayout>

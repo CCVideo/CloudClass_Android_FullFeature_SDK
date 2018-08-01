@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp">
+
+    <ImageView
+        android:id="@+id/id_user_device_icon"
+        android:layout_width="21dp"
+        android:layout_height="21dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/user_computer"/>
+
+    <TextView
+        android:id="@+id/id_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="80dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="13dp"
+        android:layout_toEndOf="@id/id_user_device_icon"
+        android:textColor="@color/colorItemTip"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textSize="@dimen/item_tip_size"/>
+
+    <ImageView
+        android:id="@+id/id_user_identity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/id_user_name"
+        android:src="@drawable/user_identity_teacher"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/id_user_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/user_arrow"/>
+
+    <RelativeLayout
+        android:id="@+id/id_user_status_lianmai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_toStartOf="@id/id_user_arrow"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/id_user_status_wait"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/user_wait_icon"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/item_tip_size"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/id_user_status_ing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/user_lianmai_icon"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/id_user_status_hand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="7dp"
+        android:layout_toStartOf="@id/id_user_status_lianmai"
+        android:src="@drawable/user_hand_icon"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/id_user_status_gag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="7dp"
+        android:layout_toStartOf="@id/id_user_status_hand"
+        android:src="@drawable/user_gag_icon"
+        android:visibility="gone"/>
+
+    <!--<ImageView
+        android:id="@+id/id_user_status_mic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="7dp"
+        android:layout_toStartOf="@id/id_user_status_gag"
+        android:src="@drawable/user_mic_close"
+        android:visibility="gone"/>-->
+
+    <ImageView
+        android:id="@+id/id_user_status_draw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@id/id_user_status_gag"
+        android:src="@drawable/list_draw_icon"
+        android:visibility="gone"/>
+
+</RelativeLayout>

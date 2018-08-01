@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--左上角-->
+<RelativeLayout android:id="@+id/id_publish_room"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/top_bg">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/id_top_class_icon"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:src="@drawable/top_class"
+        app:civ_border_color="#00000000"
+        app:civ_border_width="0dp"/>
+
+    <RelativeLayout
+        android:id="@+id/id_top_class_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="2dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="2dp"
+        android:layout_toEndOf="@id/id_top_class_icon">
+
+        <TextView
+            android:id="@+id/id_top_class_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:ellipsize="end"
+            android:maxLength="8"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:id="@+id/id_top_class_users"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/id_top_class_name"
+            android:layout_below="@id/id_top_class_name"
+            android:textColor="#FFFFFF"
+            android:textSize="11sp"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/id_top_class_handup_flag"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="3dp"
+        android:layout_toEndOf="@id/id_top_class_msg"
+        android:src="@drawable/top_hand"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/id_top_class_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/id_top_class_msg"
+        android:src="@drawable/small_arrows"/>
+
+</RelativeLayout>

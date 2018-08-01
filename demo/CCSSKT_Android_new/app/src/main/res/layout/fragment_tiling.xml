@@ -1,0 +1,20 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="#363636">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/id_tiling_videos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#363636"
+        android:overScrollMode="never"
+        android:scrollbars="none"/>
+
+    <FrameLayout
+        android:id="@+id/id_tiling_receive_click"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00000000"/>
+
+</FrameLayout>

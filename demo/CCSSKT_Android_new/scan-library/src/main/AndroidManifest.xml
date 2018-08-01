@@ -1,0 +1,17 @@
+<manifest package="com.fly.scan"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application android:allowBackup="false"
+                 android:icon="@mipmap/ic_launcher"
+                 android:label="@string/app_name"
+                 android:supportsRtl="true"
+                 android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".TestScanActivity"
+            android:configChanges="orientation|screenSize|keyboard|keyboardHidden"
+            android:screenOrientation="portrait"/>
+
+    </application>
+
+</manifest>
