@@ -4,7 +4,7 @@ buildscript {
 
     ext {
         versionCode = 21
-        versionName = "2.5.0"
+        versionName = "2.8.0"
     }
 
     repositories {

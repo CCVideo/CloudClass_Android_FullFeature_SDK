@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.bokecc.ccsskt.example.view.ItemLayout
+        xmlns:item="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/id_named_set_time"
+        style="@style/ItemStyle"
+        android:layout_marginTop="20dp"
+        item:tipTxt="@string/set_time_tip"
+        item:valueColor="@color/colorPrimary"/>
+
+    <Button
+        android:id="@+id/id_named_start"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/round_btn"
+        android:text="@string/start_named_tip"
+        android:textColor="#ffffff"/>
+
+</LinearLayout>

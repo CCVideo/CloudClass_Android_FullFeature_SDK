@@ -20,7 +20,6 @@ android {
 //            exclude "lib/arm64-v8a/libjingle_peerconnection_so.so"
 //        }
     }
-
     // 禁止Lint出错导致打包异常终止
     lintOptions {
         disable 'MissingTranslation', 'ExtraTranslation'
@@ -60,6 +59,7 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:appcompat-v7:25.3.1'
+//    compile project(':ssktlibrary')
     compile project(':library')
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
@@ -84,21 +84,22 @@ dependencies {
     annotationProcessor 'com.github.hotchemi:permissionsdispatcher-processor:2.4.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
     compile 'com.cpiz.bubbleview:bubbleview:1.0.2'
-    //    compile 'tv.danmaku.ijk.media:ijkplayer-java:0.8.4'
-    //    compile 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.8.4'
+//    compile 'tv.danmaku.ijk.media:ijkplayer-java:0.8.4'
+//    compile 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.8.4'
     compile project(':scan-library')
-    //    compile 'tv.danmaku.ijk.media:ijkplayer-armv5:0.8.4'
-    //    compile 'tv.danmaku.ijk.media:ijkplayer-arm64:0.8.4'
-    //    compile 'tv.danmaku.ijk.media:ijkplayer-x86:0.8.4'
-    //    compile 'tv.danmaku.ijk.media:ijkplayer-x86_64:0.8.4'
-    //
-    //    compile 'tv.danmaku.ijk.media:ijkplayer-exo:0.8.4'
     compile('io.socket:socket.io-client:0.8.3') {
         // excluding org.json which is provided by Android
         exclude group: 'org.json', module: 'json'
     }
     compile 'com.squareup.okhttp3:okhttp:3.8.1'
     compile 'com.squareup.okhttp3:logging-interceptor:3.8.1'
-    implementation files('libs/ccclassroom.jar')
+    compile files('libs/ccclassroom.jar')
+//    compile 'tv.danmaku.ijk.media:ijkplayer-armv5:0.8.4'
+//    compile 'tv.danmaku.ijk.media:ijkplayer-arm64:0.8.4'
+//    compile 'tv.danmaku.ijk.media:ijkplayer-x86:0.8.4'
+//    compile 'tv.danmaku.ijk.media:ijkplayer-x86_64:0.8.4'
+//
+//    compile 'tv.danmaku.ijk.media:ijkplayer-exo:0.8.4'
+
 }
 

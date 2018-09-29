@@ -1,0 +1,93 @@
+<resources>
+    <string name="app_name">云课堂</string>
+
+    <string name="popup_cancel_txt">取消</string>
+    <string name="popup_ok_txt">确认</string>
+
+    <string name="validate_nickname">请输入昵称</string>
+    <string name="validate_password">请输入密码</string>
+    <string name="validate_room">进入房间</string>
+
+    <string name="setting_gag">全体禁言</string>
+    <string name="setting_loop_play">视频轮播</string>
+    <string name="setting_close_mic">全体关麦</string>
+    <string name="setting_low_flow">低流量模式</string>
+    <string name="setting_mai">全体下麦</string>
+    <string name="setting_class_name">课堂名称</string>
+    <string name="setting_class_introduce">课堂简介</string>
+    <string name="setting_lianmai_mode">连麦模式</string>
+    <string name="setting_lianmai_free">自由连麦</string>
+    <string name="setting_lianmai_named">举手连麦</string>
+    <string name="setting_lianmai_auto">自动连麦</string>
+    <string name="setting_media_mode">连麦音视频</string>
+    <string name="setting_media_audio">音频连麦</string>
+    <string name="setting_media_both">视频连麦</string>
+    <string name="setting_loop_play_time">轮播频率</string>
+    <string name="setting_tbitrate">老师视频清晰度</string>
+    <string name="setting_sbitrate">学生视频清晰度</string>
+    <string name="setting_bitrate">视频清晰度</string>
+    <string name="setting_bitrate_lowest">最低</string>
+    <string name="setting_bitrate_lower">较低</string>
+    <string name="setting_bitrate_medium">中等</string>
+    <string name="setting_bitrate_higher">较高</string>
+    <string name="setting_bitrate_highest">最高</string>
+
+    <string name="scan_title">扫描二维码</string>
+
+    <string name="doc_list_tip">请通过web端将文件上传至文档区</string>
+    <string name="doc_item_del">删除</string>
+    <string name="role_teacher">老师</string>
+    <string name="role_student">学生</string>
+    <string name="title_activity_named">NamedActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_doc_img_grid">DocImgGridActivity</string>
+    <string name="title_activity_named_time">NamedTimeActivity</string>
+    <string name="start_named_tip">发起点名</string>
+    <string name="set_time_tip">设置允许参与点名的时间</string>
+    <string name="named_time_def">1分钟</string>
+    <string name="title_activity_named_count">NamedCountActivity</string>
+    <string name="restart_named">重新签到</string>
+    <string name="title_activity_teacher">TeacherActivity</string>
+    <string name="no_class_tip">还没上课，先休息一会吧</string>
+    <string name="teacher_gone">老师暂时离开了，请稍等</string>
+    <string name="send_txt">发送</string>
+    <string name="title_activity_student">StudentActivity</string>
+    <string name="named_ok">点名</string>
+    <string name="lecture_no_doc_tip">文档区暂无文件</string>
+    <string name="bitrate_save">保存</string>
+
+    <!--扫一扫-->
+    <string name="title_activity_scan_qr_code">扫一扫</string>
+    <string name="qc_code_close">关闭</string>
+    <string name="qr_code_select_picture">照片</string>
+    <string name="qr_code_open_flash_light">打开闪光灯</string>
+    <string name="qr_code_close_flash_light">关闭闪光灯</string>
+    <string name="qr_code_auto_scan_notification">将二维码放入框内，即可自动扫描</string>
+    <string name="qr_code_notification">提示</string>
+    <string name="qr_code_camera_not_open">您的相机功能好像没有打开哦~去\"设置>隐私>相机\"设置一下吧</string>
+    <string name="qr_code_positive_button_know">知道了</string>
+    <string name="qr_code_positive_button_confirm">确认</string>
+    <string name="qr_code_could_not_read_qr_code_from_picture">没有读出图片中的链接，换张图片试试吧~</string>
+    <string name="qr_code_could_not_read_qr_code_from_scanner">对不起，无法打开扫出的内容</string>
+    <string name="qr_code_camera_not_found">未检测到相机</string>
+    <string name="qr_album">相册</string>
+    <string name="direction_class_tip">请选择课堂模式</string>
+    <string name="direction_class_h_tip">横屏版</string>
+    <string name="direction_class_v_tip">竖屏版</string>
+
+    <string name="vote_tip">答题卡</string>
+    <string name="commit_answer">提交答案</string>
+    <string name="brain_commit">提交</string>
+    <string name="kick_down_mai_tip">是否确定将学生全部踢下麦</string>
+    <string name="right_answer_tip">正确答案：</string>
+    <string name="self_answer_tip">您的答案：</string>
+    <string name="lecture_doc_prepare">文档正在准备中</string>
+    <string name="link_confirm">确认</string>
+    <string name="link_url">请输入课堂链接</string>
+    <string name="join_class">进入课堂</string>
+
+    <string name="validate_net_tip">网络状况:</string>
+    <string name="first_step">云课堂是一款实时互动的在线教室APP，您可以通过老师提供的指定链接或二维码进入教室，进行在线互动教学。</string>
+</resources>
